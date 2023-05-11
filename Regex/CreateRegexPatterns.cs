@@ -26,6 +26,42 @@ namespace RegexPatterns
                 }
             }   
         }
+
+        public static void ValidateFirstName()
+        {
+            string pattern = "[A-Z][a-zA-Z]*";
+            string[] inputs = { "Sushil", "Sachin", "Mahesh", "amit" };
+            Console.Write("Input names are: ");
+            PrintInputs(inputs);
+            Console.WriteLine("Valid names are: ");
+            IterateOverLoop(inputs, pattern);
+
+        }
+
+        public static void PrintInputs(string[] inputs)
+        {
+            foreach(string s in inputs)
+            {
+                Console.Write($"{s} ");
+            }
+        }
+
+        public static void IterateOverLoop(string[] inputs, string pattern)
+        {
+            foreach (string s in inputs)
+            {
+                if (Regex.IsMatch(s, pattern))
+                {
+                    Console.WriteLine($"Valid Input: {s}");
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid input: {s}");
+                }
+                
+
+            }
+        }
      
     }
 }

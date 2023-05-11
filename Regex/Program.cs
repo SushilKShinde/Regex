@@ -21,13 +21,13 @@ namespace RegexPatterns
                     CreateRegexPatterns.PhoneNumberPattern();
                     break;
                 case 2:
-
+                    CreateRegexPatterns.ValidateFirstName();
                     break;
                 default:
                     Console.WriteLine("Choose valid option");
                     break;
             }
-
+            Console.ReadLine();
         
         }
     }
